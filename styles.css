@@ -90,6 +90,25 @@ nav a:hover { color: var(--acc); }
   position: relative;
 }
 
+#geimstod-bakgrunnur {
+  position: fixed;
+  top: 50%;
+  right: -5%;
+  transform: translateY(-50%);
+  width: 55vw;
+  height: 40vw;
+  background: url('images/geimstod.jpg') center/contain no-repeat;
+  opacity: 0.12;
+  z-index: -1;
+  pointer-events: none;
+  animation: float 12s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(-50%) translateX(0) rotate(-2deg); }
+  50%       { transform: translateY(-52%) translateX(-1%) rotate(1deg); }
+}
+
 #stjornur {
   position: fixed;
   top: 0;
