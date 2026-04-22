@@ -523,6 +523,62 @@ nav a:hover { color: var(--acc); }
   padding-top: 1rem;
 }
 
+.ferilskra-leidbeiningar {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.ferilskra-leidbeiningar h3 {
+  font-size: 1.4rem;
+  color: var(--acc);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.ferilskra-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.ferilskra-kort {
+  background: var(--bl);
+  border: 1px solid rgba(108, 63, 197, 0.3);
+  border-radius: 14px;
+  padding: 1.5rem 1.2rem;
+  text-align: center;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.ferilskra-kort:hover {
+  border-color: var(--purp2);
+  transform: translateY(-4px);
+}
+
+.ferilskra-tala {
+  width: 2.4rem;
+  height: 2.4rem;
+  background: linear-gradient(135deg, var(--purp), var(--purp2));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 800;
+  margin: 0 auto 0.8rem;
+}
+
+.ferilskra-kort h4 {
+  font-size: 0.95rem;
+  color: var(--hvít);
+  margin-bottom: 0.5rem;
+}
+
+.ferilskra-kort p {
+  font-size: 0.85rem;
+  color: var(--texti);
+}
+
 .umsokn-form-wrap {
   background: var(--bl);
   border: 1px solid rgba(108, 63, 197, 0.3);
