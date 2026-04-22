@@ -26,14 +26,14 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(10, 14, 26, 0.9);
+  background: rgba(10, 14, 26, 0.95);
   backdrop-filter: blur(10px);
   z-index: 100;
   border-bottom: 1px solid rgba(108, 63, 197, 0.3);
 }
 
 nav {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 1rem 2rem;
   display: flex;
@@ -45,22 +45,37 @@ nav {
   font-size: 1.4rem;
   font-weight: 700;
   color: var(--acc);
+  white-space: nowrap;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 nav a {
   color: var(--texti);
   text-decoration: none;
+  font-size: 0.9rem;
   transition: color 0.3s;
 }
 
-nav a:hover {
-  color: var(--acc);
+nav a:hover { color: var(--acc); }
+
+/* SHARED */
+.section-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-sub {
+  color: var(--texti);
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  text-align: center;
 }
 
 /* HERO */
@@ -75,6 +90,7 @@ nav a:hover {
     radial-gradient(ellipse at 80% 20%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
     var(--bl);
   padding: 2rem;
+  position: relative;
 }
 
 .hero::before {
@@ -132,18 +148,17 @@ nav a:hover {
   box-shadow: 0 8px 30px rgba(108, 63, 197, 0.6);
 }
 
-/* FERÐIR */
-.ferdir {
-  padding: 6rem 2rem;
-  max-width: 1100px;
-  margin: 0 auto;
+/* SECTION HEADINGS */
+.thjonusta h2, .stjornendur h2, .skipurit h2, .umsokn h2, .samband h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: var(--acc);
   text-align: center;
 }
 
-.ferdir h2, .um h2, .samband h2 {
-  font-size: 2.2rem;
-  margin-bottom: 3rem;
-  color: var(--acc);
+/* ÞJÓNUSTA */
+.thjonusta {
+  padding: 6rem 2rem;
 }
 
 .kort-grid {
@@ -165,21 +180,9 @@ nav a:hover {
   border-color: var(--purp2);
 }
 
-.kort-mynd {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
-}
-
-.kort h3 {
-  font-size: 1.4rem;
-  margin-bottom: 0.8rem;
-  color: var(--hvít);
-}
-
-.kort p {
-  color: var(--texti);
-  margin-bottom: 1.5rem;
-}
+.kort-mynd { font-size: 3.5rem; margin-bottom: 1rem; }
+.kort h3 { font-size: 1.4rem; margin-bottom: 0.8rem; color: var(--hvít); }
+.kort p { color: var(--texti); margin-bottom: 1.5rem; }
 
 .verd {
   display: inline-block;
@@ -207,13 +210,12 @@ nav a:hover {
 }
 
 .um h2 {
+  font-size: 2.2rem;
   margin-bottom: 1.5rem;
+  color: var(--acc);
 }
 
-.um-texti p {
-  color: var(--texti);
-  margin-bottom: 1.5rem;
-}
+.um-texti p { color: var(--texti); margin-bottom: 1.5rem; }
 
 .um-texti ul {
   list-style: none;
@@ -246,6 +248,191 @@ nav a:hover {
   color: var(--purp2);
 }
 
+/* STJÓRNENDUR */
+.stjornendur {
+  padding: 6rem 2rem;
+  background: var(--bl2);
+}
+
+.stjorn-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.stjorn-kort {
+  background: var(--bl);
+  border: 1px solid rgba(108, 63, 197, 0.3);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.stjorn-kort:hover {
+  transform: translateY(-4px);
+  border-color: var(--purp2);
+}
+
+.stjorn-mynd {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.stjorn-kort h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.titill {
+  display: inline-block;
+  padding: 0.25rem 0.9rem;
+  background: rgba(155, 109, 255, 0.15);
+  border: 1px solid var(--purp2);
+  border-radius: 20px;
+  color: var(--purp2);
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.stjorn-kort p {
+  color: var(--texti);
+  font-size: 0.95rem;
+}
+
+/* SKIPURIT */
+.skipurit {
+  padding: 6rem 2rem;
+}
+
+.org-tré {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.org-lag {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.org-tengi-lóðrétt {
+  width: 2px;
+  height: 2rem;
+  background: linear-gradient(to bottom, var(--purp), var(--purp2));
+  margin: 0.3rem 0;
+}
+
+.org-box {
+  background: var(--bl2);
+  border: 1px solid rgba(108, 63, 197, 0.4);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  min-width: 160px;
+  transition: border-color 0.3s;
+}
+
+.org-box:hover { border-color: var(--purp2); }
+
+.org-box.ceo {
+  background: linear-gradient(135deg, rgba(108, 63, 197, 0.25), rgba(0, 212, 255, 0.1));
+  border-color: var(--purp2);
+  min-width: 200px;
+  padding: 1.2rem 2rem;
+}
+
+.org-box.deild {
+  border-color: rgba(0, 212, 255, 0.3);
+  background: rgba(0, 212, 255, 0.05);
+}
+
+.org-icon { font-size: 1.8rem; }
+.org-box strong { font-size: 0.9rem; color: var(--hvít); }
+.org-box span { font-size: 0.8rem; color: var(--texti); }
+
+.lag-1 .org-box strong { font-size: 1rem; }
+
+/* UMSÓKN */
+.umsokn {
+  padding: 6rem 2rem;
+  background: var(--bl2);
+}
+
+.skref-grid {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+}
+
+.skref {
+  background: var(--bl);
+  border: 1px solid rgba(108, 63, 197, 0.3);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  flex: 1;
+  min-width: 200px;
+  max-width: 260px;
+}
+
+.skref-tala {
+  width: 3rem;
+  height: 3rem;
+  background: linear-gradient(135deg, var(--purp), var(--purp2));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin: 0 auto 1rem;
+}
+
+.skref h3 { margin-bottom: 0.6rem; font-size: 1.1rem; }
+.skref p { color: var(--texti); font-size: 0.95rem; }
+
+.skref-ör {
+  font-size: 2rem;
+  color: var(--purp2);
+  align-self: center;
+  padding-top: 1rem;
+}
+
+.umsokn-form-wrap {
+  background: var(--bl);
+  border: 1px solid rgba(108, 63, 197, 0.3);
+  border-radius: 16px;
+  padding: 2.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.umsokn-form-wrap h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  color: var(--acc);
+  text-align: center;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
 /* SAMBAND */
 .samband {
   padding: 6rem 2rem;
@@ -254,13 +441,14 @@ nav a:hover {
   text-align: center;
 }
 
+/* FORMS */
 form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-input, textarea {
+input, textarea, select {
   padding: 1rem 1.2rem;
   background: var(--bl2);
   border: 1px solid rgba(108, 63, 197, 0.4);
@@ -269,16 +457,17 @@ input, textarea {
   font-size: 1rem;
   font-family: inherit;
   transition: border-color 0.3s;
+  width: 100%;
 }
 
-input:focus, textarea:focus {
+input:focus, textarea:focus, select:focus {
   outline: none;
   border-color: var(--acc);
 }
 
-input::placeholder, textarea::placeholder {
-  color: var(--texti);
-}
+input::placeholder, textarea::placeholder { color: var(--texti); }
+
+select option { background: var(--bl2); }
 
 /* FOOTER */
 footer {
@@ -290,7 +479,11 @@ footer {
 
 /* MOBILE */
 @media (max-width: 768px) {
-  nav ul { gap: 1rem; font-size: 0.9rem; }
+  nav ul { gap: 0.8rem; font-size: 0.8rem; }
   .um-innihald { grid-template-columns: 1fr; gap: 2rem; }
   .um-tölur { grid-template-columns: repeat(3, 1fr); }
+  .form-row { grid-template-columns: 1fr; }
+  .skref-ör { display: none; }
+  .org-lag { gap: 0.6rem; }
+  .org-box { min-width: 130px; padding: 0.8rem 1rem; }
 }

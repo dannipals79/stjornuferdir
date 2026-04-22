@@ -5,7 +5,13 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
-document.querySelector('form').addEventListener('submit', e => {
+document.getElementById('umsokn-form').addEventListener('submit', e => {
+  e.preventDefault();
+  alert('Takk fyrir umsóknina! Við höfum samband við þig innan 48 klukkustunda.');
+  e.target.reset();
+});
+
+document.getElementById('samband-form').addEventListener('submit', e => {
   e.preventDefault();
   alert('Takk fyrir skilaboðin! Við höfum samband fljótlega.');
   e.target.reset();
