@@ -579,6 +579,10 @@ nav a:hover { color: var(--acc); }
   color: var(--texti);
 }
 
+#atvinnuumsokn {
+  scroll-margin-top: 80px;
+}
+
 .umsokn-form-wrap {
   background: var(--bl);
   border: 1px solid rgba(108, 63, 197, 0.3);
