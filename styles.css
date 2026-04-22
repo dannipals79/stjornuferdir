@@ -191,6 +191,15 @@ nav a:hover { color: var(--acc); }
   display: block;
   box-shadow: 0 0 20px rgba(200, 80, 50, 0.5);
 }
+
+.kort-pláneta--wide {
+  width: 160px;
+  height: 80px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(180, 160, 100, 0.4);
+  object-fit: cover;
+  object-position: center;
+}
 .kort h3 { font-size: 1.4rem; margin-bottom: 0.8rem; color: var(--hvít); }
 .kort p { color: var(--texti); margin-bottom: 1.5rem; }
 
