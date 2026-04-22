@@ -520,6 +520,44 @@ nav a:hover { color: var(--acc); }
   text-align: center;
 }
 
+.skra-upphleðsla {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.skra-upphleðsla label {
+  font-size: 0.9rem;
+  color: var(--texti);
+}
+
+.skra-val {
+  font-size: 0.8rem;
+  color: rgba(176, 184, 212, 0.6);
+}
+
+.skra-upphleðsla input[type="file"] {
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  color: var(--texti);
+}
+
+.skra-upphleðsla input[type="file"]::file-selector-button {
+  background: rgba(108, 63, 197, 0.3);
+  border: 1px solid var(--purp2);
+  color: var(--hvít);
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  margin-right: 0.8rem;
+  transition: background 0.2s;
+}
+
+.skra-upphleðsla input[type="file"]::file-selector-button:hover {
+  background: rgba(108, 63, 197, 0.5);
+}
+
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
