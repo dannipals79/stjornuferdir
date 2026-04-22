@@ -301,66 +301,153 @@ nav a:hover { color: var(--acc); }
   font-size: 0.95rem;
 }
 
-/* SKIPURIT */
+/* SKIPURIT — NASA stíll */
 .skipurit {
-  padding: 6rem 2rem;
+  padding: 6rem 1rem;
+  overflow-x: auto;
 }
 
-.org-tré {
+.section-wrap-wide {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.org-chart {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  min-width: 700px;
+}
+
+/* Nodes */
+.org-node {
+  border: 2px solid;
+  text-align: center;
+  padding: 0.6rem 1rem;
+  position: relative;
+  min-width: 140px;
+}
+
+.node-top {
+  background: #1a237e;
+  border-color: #5c6bc0;
+  min-width: 260px;
+  padding: 0.8rem 2rem;
+}
+
+.node-blue {
+  background: #0d1b4b;
+  border-color: #3f51b5;
+  min-width: 200px;
+}
+
+.node-dept {
+  background: #0d2b4b;
+  border-color: #1565c0;
+  min-width: 150px;
+}
+
+.node-sub {
+  background: #0a1a2e;
+  border-color: rgba(0, 212, 255, 0.4);
+  min-width: 130px;
+  padding: 0.5rem 0.8rem;
+}
+
+.node-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #90caf9;
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+}
+
+.node-top .node-label { color: #e3f2fd; font-size: 0.75rem; }
+
+.node-name {
+  font-size: 0.85rem;
+  color: var(--hvít);
+  font-weight: 600;
+}
+
+.node-role {
+  font-size: 0.72rem;
+  color: var(--texti);
+  margin-top: 0.15rem;
+}
+
+.node-sub .node-label {
+  font-size: 0.75rem;
+  color: var(--acc);
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+/* Connecting lines */
+.org-vline-center {
+  width: 2px;
+  height: 2.5rem;
+  background: #3f51b5;
+}
+
+.org-vline-short {
+  width: 2px;
+  height: 1.5rem;
+  background: #1565c0;
+  margin: 0 auto;
+}
+
+/* Row 1 */
+.org-row { display: flex; justify-content: center; align-items: flex-start; gap: 0; width: 100%; }
+
+/* Row 2 — two nodes with horizontal line between */
+.row-2 {
+  position: relative;
+  gap: 6rem;
+}
+
+.org-hline-row2 {
+  width: 220px;
+  height: 2px;
+  background: #3f51b5;
+  margin: 0 auto;
+}
+
+/* Row 3 — 5 columns */
+.row-3 {
   gap: 0;
-}
-
-.org-lag {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
   width: 100%;
+  position: relative;
+  justify-content: space-between;
+  border-top: 2px solid #1565c0;
+  padding-top: 0;
 }
 
-.org-tengi-lóðrétt {
+.row-3::before {
+  display: none;
+}
+
+.org-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  padding-top: 0;
+  position: relative;
+}
+
+.org-col::before {
+  content: '';
+  display: block;
   width: 2px;
   height: 2rem;
-  background: linear-gradient(to bottom, var(--purp), var(--purp2));
-  margin: 0.3rem 0;
+  background: #1565c0;
+  margin: 0 auto 0;
 }
-
-.org-box {
-  background: var(--bl2);
-  border: 1px solid rgba(108, 63, 197, 0.4);
-  border-radius: 12px;
-  padding: 1rem 1.5rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.2rem;
-  min-width: 160px;
-  transition: border-color 0.3s;
-}
-
-.org-box:hover { border-color: var(--purp2); }
-
-.org-box.ceo {
-  background: linear-gradient(135deg, rgba(108, 63, 197, 0.25), rgba(0, 212, 255, 0.1));
-  border-color: var(--purp2);
-  min-width: 200px;
-  padding: 1.2rem 2rem;
-}
-
-.org-box.deild {
-  border-color: rgba(0, 212, 255, 0.3);
-  background: rgba(0, 212, 255, 0.05);
-}
-
-.org-icon { font-size: 1.8rem; }
-.org-box strong { font-size: 0.9rem; color: var(--hvít); }
-.org-box span { font-size: 0.8rem; color: var(--texti); }
-
-.lag-1 .org-box strong { font-size: 1rem; }
 
 /* UMSÓKN */
 .umsokn {
@@ -484,6 +571,5 @@ footer {
   .um-tölur { grid-template-columns: repeat(3, 1fr); }
   .form-row { grid-template-columns: 1fr; }
   .skref-ör { display: none; }
-  .org-lag { gap: 0.6rem; }
-  .org-box { min-width: 130px; padding: 0.8rem 1rem; }
+  .skipurit { padding: 4rem 0.5rem; }
 }
