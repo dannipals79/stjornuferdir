@@ -16,7 +16,7 @@
 
 body {
   font-family: 'Segoe UI', system-ui, sans-serif;
-  background: var(--bl);
+  background: #0a0e1a;
   color: var(--hvít);
   line-height: 1.6;
 }
@@ -85,10 +85,7 @@ nav a:hover { color: var(--acc); }
   align-items: center;
   justify-content: center;
   text-align: center;
-  background:
-    radial-gradient(ellipse at 20% 50%, rgba(108, 63, 197, 0.15) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 20%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
-    var(--bl);
+  background: transparent;
   padding: 2rem;
   position: relative;
 }
@@ -183,7 +180,7 @@ nav a:hover { color: var(--acc); }
 }
 
 .kort {
-  background: var(--bl2);
+  background: rgba(15, 22, 41, 0.75);
   border: 1px solid rgba(108, 63, 197, 0.3);
   border-radius: 16px;
   padding: 2.5rem 2rem;
@@ -231,7 +228,7 @@ nav a:hover { color: var(--acc); }
 /* UM */
 .um {
   padding: 6rem 2rem;
-  background: var(--bl2);
+  background: rgba(15, 22, 41, 0.75);
 }
 
 .um-innihald {
@@ -267,7 +264,7 @@ nav a:hover { color: var(--acc); }
 }
 
 .tala {
-  background: var(--bl);
+  background: transparent;
   border: 1px solid rgba(108, 63, 197, 0.3);
   border-radius: 12px;
   padding: 1.5rem 1rem;
@@ -285,7 +282,7 @@ nav a:hover { color: var(--acc); }
 /* STJÓRNENDUR */
 .stjornendur {
   padding: 6rem 2rem;
-  background: var(--bl2);
+  background: rgba(15, 22, 41, 0.75);
 }
 
 .stjorn-grid {
@@ -295,7 +292,7 @@ nav a:hover { color: var(--acc); }
 }
 
 .stjorn-kort {
-  background: var(--bl);
+  background: transparent;
   border: 1px solid rgba(108, 63, 197, 0.3);
   border-radius: 16px;
   padding: 2rem;
@@ -492,7 +489,7 @@ nav a:hover { color: var(--acc); }
 /* UMSÓKN */
 .umsokn {
   padding: 6rem 2rem;
-  background: var(--bl2);
+  background: rgba(15, 22, 41, 0.75);
 }
 
 .skref-grid {
@@ -505,7 +502,7 @@ nav a:hover { color: var(--acc); }
 }
 
 .skref {
-  background: var(--bl);
+  background: transparent;
   border: 1px solid rgba(108, 63, 197, 0.3);
   border-radius: 16px;
   padding: 2rem 1.5rem;
@@ -557,7 +554,7 @@ nav a:hover { color: var(--acc); }
 }
 
 .ferilskra-kort {
-  background: var(--bl);
+  background: transparent;
   border: 1px solid rgba(108, 63, 197, 0.3);
   border-radius: 14px;
   padding: 1.5rem 1.2rem;
@@ -599,7 +596,7 @@ nav a:hover { color: var(--acc); }
 }
 
 .umsokn-form-wrap {
-  background: var(--bl);
+  background: transparent;
   border: 1px solid rgba(108, 63, 197, 0.3);
   border-radius: 16px;
   padding: 2.5rem;
@@ -675,7 +672,7 @@ form {
 
 input, textarea, select {
   padding: 1rem 1.2rem;
-  background: var(--bl2);
+  background: rgba(15, 22, 41, 0.75);
   border: 1px solid rgba(108, 63, 197, 0.4);
   border-radius: 10px;
   color: var(--hvít);
@@ -692,7 +689,7 @@ input:focus, textarea:focus, select:focus {
 
 input::placeholder, textarea::placeholder { color: var(--texti); }
 
-select option { background: var(--bl2); }
+select option { background: rgba(15, 22, 41, 0.75); }
 
 /* FOOTER */
 footer {
