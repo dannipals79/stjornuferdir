@@ -93,6 +93,14 @@ nav a:hover { color: var(--acc); }
   position: relative;
 }
 
+#stjornur {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
 .hero::before {
   content: '';
   position: absolute;
@@ -110,6 +118,7 @@ nav a:hover { color: var(--acc); }
 .hero-content {
   position: relative;
   max-width: 700px;
+  z-index: 1;
 }
 
 .hero h1 {
