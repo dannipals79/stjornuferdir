@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="80" viewBox="0 0 280 80">
+  <defs>
+    <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#9b6dff"/>
+      <stop offset="100%" style="stop-color:#00d4ff"/>
+    </linearGradient>
+  </defs>
+  <!-- Star shape -->
+  <polygon points="35,5 38,18 50,18 41,26 44,39 35,31 26,39 29,26 20,18 32,18"
+    fill="none" stroke="url(#g3)" stroke-width="1.5"/>
+  <circle cx="35" cy="22" r="4" fill="#9b6dff"/>
+  <!-- Main text -->
+  <text x="60" y="30" font-family="Georgia,serif" font-size="18" font-weight="700" fill="white">Stjörnuferðir</text>
+  <!-- Tagline -->
+  <text x="60" y="50" font-family="Arial" font-size="9" letter-spacing="4" fill="#00d4ff">GEIMFERÐAÞJÓNUSTA</text>
+  <!-- Dots -->
+  <circle cx="62" cy="60" r="1.5" fill="#9b6dff"/>
+  <circle cx="70" cy="60" r="1.5" fill="#6c3fc5"/>
+  <circle cx="78" cy="60" r="1.5" fill="#00d4ff"/>
+</svg>
